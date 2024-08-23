@@ -1,0 +1,18 @@
+---
+import Navbar from '@components/Navbar.astro';
+import BaseHead from '@components/BaseHead.astro';
+const { title, tab } = Astro.props;
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <BaseHead title={title}/>
+  </head>
+  <body>
+    <Navbar tab={tab} />
+    <slot />
+  </body>
+</html>

@@ -1,0 +1,17 @@
+---
+const { tab } = Astro.props;
+---
+<nav>
+  <ul>
+    <li class:list={[{active: tab == "inicio"}]}><a href="/">Inicio</a></li>
+    <li class:list={[{active: tab == "about"}]}><a href="/about">Acerca de mí</a></li>
+    <li class:list={[{active: tab == "products"}]}><a href="/productos">Productos</a></li>
+    <li class:list={[{active: tab == "servicios"}]}><a href="/servicios">Servicios</a></li>
+  </ul>
+</nav>
+
+<style>
+  .active {
+    background-color: green;
+  }
+</style>
